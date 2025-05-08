@@ -28,7 +28,7 @@ class FlutterZoomWeb extends ZoomAllInOneSdkPlatform {
 
     zoomoptions = options;
 
-    ZoomMtg.setZoomJSLib('https://source.zoom.us/3.11.2/lib', '/av');
+    ZoomMtg.setZoomJSLib('https://source.zoom.us/3.10.0/lib', '/av');
     ZoomMtg.preLoadWasm();
     ZoomMtg.prepareWebSDK();
 
