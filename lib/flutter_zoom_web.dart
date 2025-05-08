@@ -1,8 +1,10 @@
 import 'dart:async';
 import 'dart:html';
 import 'dart:js';
+
 import 'package:flutter_web_plugins/flutter_web_plugins.dart';
 import 'package:zoom_allinonesdk/data/models/meeting_options.dart';
+
 import 'data/models/accesstokenmodel.dart';
 import 'data/models/zoom_options.dart';
 import 'data/providers/zoom_provider.dart';
@@ -30,7 +32,7 @@ class FlutterZoomWeb extends ZoomAllInOneSdkPlatform {
     ZoomMtg.preLoadWasm();
     ZoomMtg.prepareWebSDK();
 
-    ZoomMtg.i18n.load(options.language);
+//    ZoomMtg.i18n.load(options.language);
     ZoomMtg.init(InitParams(
       leaveUrl: '/index.html',
       success: allowInterop((res) {
@@ -120,10 +122,12 @@ class FlutterZoomWeb extends ZoomAllInOneSdkPlatform {
         sdkKey: zoomoptions.clientId,
         passWord: meetingOptions.meetingPassword,
         success: allowInterop((var res) {
-          completer.complete(true);
+          if (!completer.isCompleted) {
+            completer.complete(true);
+          }
         }),
         error: allowInterop((var res) {
-          completer.complete(false);
+          if (!completer.isCompleted) completer.complete(false);
         })));
     return completer.future;
   }
