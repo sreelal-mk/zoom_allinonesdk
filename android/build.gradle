@@ -33,7 +33,7 @@ android {
     }
     
     defaultConfig {
-        minSdkVersion 21
+        minSdkVersion 24
         targetSdkVersion 34
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables.useSupportLibrary = true
@@ -47,7 +47,7 @@ android {
 }
 android {
     namespace 'com.example.zoomandroid'
-    compileSdk 33
+    compileSdk 34
     viewBinding {
         enabled = true
     }
@@ -55,7 +55,7 @@ android {
     defaultConfig {
         
         minSdk 24
-        targetSdk 33
+        targetSdk 34
         versionCode 1
         versionName "1.0"
         vectorDrawables.useSupportLibrary = true
