@@ -101,25 +101,25 @@ Add the following stylesheet links to the head of `index.html`:
     <link
       type="text/css"
       rel="stylesheet"
-      href="https://source.zoom.us/2.18.0/css/bootstrap.css"
+      href="https://source.zoom.us/3.1.6/css/bootstrap.css"
     />
     <link
       type="text/css"
       rel="stylesheet"
-      href="https://source.zoom.us/2.18.0/css/react-select.css"
+      href="https://source.zoom.us/3.1.6/css/react-select.css"
     />
 
 Import ZoomMeeting Dependencies: Add the following script tags to the body of
 index.html to import ZoomMeeting dependencies.
 
     <!-- Import ZoomMeeting dependencies -->
-    <script src="https://source.zoom.us/2.18.0/lib/vendor/react.min.js"></script>
-    <script src="https://source.zoom.us/2.18.0/lib/vendor/react-dom.min.js"></script>
-    <script src="https://source.zoom.us/2.18.0/lib/vendor/redux.min.js"></script>
-    <script src="https://source.zoom.us/2.18.0/lib/vendor/redux-thunk.min.js"></script>
-    <script src="https://source.zoom.us/2.18.0/lib/vendor/lodash.min.js"></script>
+    <script src="https://source.zoom.us/3.1.6/lib/vendor/react.min.js"></script>
+    <script src="https://source.zoom.us/3.1.6/lib/vendor/react-dom.min.js"></script>
+    <script src="https://source.zoom.us/3.1.6/lib/vendor/redux.min.js"></script>
+    <script src="https://source.zoom.us/3.1.6/lib/vendor/redux-thunk.min.js"></script>
+    <script src="https://source.zoom.us/3.1.6/lib/vendor/lodash.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jsSHA/2.4.0/sha256.js"></script>
-    <script src="https://source.zoom.us/zoom-meeting-2.18.0.min.js"></script>
+    <script src="https://source.zoom.us/zoom-meeting-3.1.6.min.js"></script>
     <script src="main.dart.js" type="application/javascript"></script>
 
 
