@@ -46,6 +46,7 @@ extension SwiftZoomAllInOneSdkPlugin{
         guard let args = call.arguments as? Dictionary<String, String> else { return }
             let meetingNumber = args["meetingId"] ?? ""
             let meetingPassword = args["meetingPassword"] ?? ""
+            let displayName = args["displayName"] ?? ""
         MobileRTC.shared().setMobileRTCRootController(UIApplication.shared.keyWindow?.rootViewController?.navigationController)
         if let meetingService = MobileRTC.shared().getMeetingService() {
         
@@ -56,6 +57,7 @@ extension SwiftZoomAllInOneSdkPlugin{
             let joinMeetingParameters = MobileRTCMeetingJoinParam()
             joinMeetingParameters.meetingNumber = meetingNumber
             joinMeetingParameters.password = meetingPassword
+            joinMeetingParameters.userName = displayName
 
             // Call the joinMeeting function in MobileRTCMeetingService. The Zoom SDK will handle the UI for you, unless told otherwise.
             // If the meeting number and meeting password are valid, the user will be put into the meeting. A waiting room UI will be presented or the meeting UI will be presented.
